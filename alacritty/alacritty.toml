@@ -1,0 +1,50 @@
+[general]
+# Automatically reload configuration when changes are saved
+live_config_reload = true
+
+[window]
+# Default window dimensions (columns and lines)
+dimensions = { columns = 100, lines = 30 }
+
+# Blank space added around the terminal text
+padding = { x = 8, y = 8 }
+
+# Turn off dynamic padding to strictly enforce the padding sizes above
+dynamic_padding = false
+
+# Window decorations: "full", "none", "transparent", or "buttonless"
+decorations = "full"
+
+# Window opacity (0.0 is completely transparent, 1.0 is opaque)
+opacity = 0.95
+
+[scrolling]
+# Maximum number of lines kept in the scrollback history
+history = 10000
+
+# Number of lines scrolled by the mouse wheel
+multiplier = 3
+
+[font]
+# Font size in points
+size = 12.0
+
+# Define the font family (replace with your installed Nerd Font for best results)
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+
+[cursor]
+# Cursor style: "Block", "Underline", or "Beam"
+style = "Beam"
+
+[colors]
+# A clean, high-contrast dark color scheme
+primary = { background = "#1e1e2e", foreground = "#cdd6f4" }
+normal = { black = "#45475a", red = "#f38ba8", green = "#a6e3a1", yellow = "#f9e2af", blue = "#89b4fa", magenta = "#f5c2e7", cyan = "#94e2d5", white = "#bac2de" }
+bright = { black = "#585b70", red = "#f38ba8", green = "#a6e3a1", yellow = "#f9e2af", blue = "#89b4fa", magenta = "#f5c2e7", cyan = "#94e2d5", white = "#a6adc8" }
+
+[terminal.shell]
+program = "fish"
+args = ["--login"]
+
