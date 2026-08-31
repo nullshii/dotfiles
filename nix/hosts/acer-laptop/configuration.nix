@@ -7,6 +7,8 @@
       inputs.home-manager.nixosModules.default
     ];
 
+  nixpkgs.config.allowUnfree = true;
+  
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -110,9 +112,15 @@
     NIXOS_OZONE_WL = "1";
   };
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   hardware.nvidia = {
     modesetting.enable = true;
     open = true; # Set to true if using turing or newer GPUs with open kernel modules
+    nvidiaSettings = true;
   };
 
   xdg.portal = {
