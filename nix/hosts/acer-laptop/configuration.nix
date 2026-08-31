@@ -113,6 +113,7 @@
     gitui
     fastfetch
     matugen
+    cmatrix
   ];
 
   environment.sessionVariables = {
