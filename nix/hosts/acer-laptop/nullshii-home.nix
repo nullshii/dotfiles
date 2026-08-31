@@ -50,8 +50,18 @@ in
       source = outOfStoreSymLink "${homeDir}/dotfiles/quickshell";
       recursive = true;
     };
-    "alacritty".source = outOfStoreSymLink "${homeDir}/dotfiles/alacritty";
-    "kitty".source = outOfStoreSymLink "${homeDir}/dotfiles/kitty";
+    "nvim" = { 
+      source = outOfStoreSymLink "${homeDir}/dotfiles/nvim";
+      recursive = true;
+    };
+    "alacritty" = { 
+      source = outOfStoreSymLink "${homeDir}/dotfiles/alacritty";
+      recursive = true;
+    };
+    "kitty" = { 
+      source = outOfStoreSymLink "${homeDir}/dotfiles/kitty";
+      recursive = true;
+    };
   };
 
   home.file = {
