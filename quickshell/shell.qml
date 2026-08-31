@@ -19,7 +19,7 @@ ShellRoot {
             margins.right: 5
 
             implicitHeight: 40
-            color: Colors.transparent
+            color: "transparent"
 
 	    RowLayout {
                 anchors.fill: parent
@@ -31,8 +31,8 @@ ShellRoot {
 	        }
 
                 Rectangle {
-	    	    color: Colors.surface
-		    border.color: Colors.primaryContainer
+	    	    color: Theme.surfaceContainer
+		    border.color: Theme.outline
 		    border.width: 2
 		    radius: Math.min(width, height) * 0.42
 	    	    implicitWidth: batteryLayout.width + 20  
@@ -47,7 +47,7 @@ ShellRoot {
 
                         Text {
 	                    text: Math.round(batteryLayout.bat.percentage * 100)
-                            color: Colors.textSurface
+                            color: Theme.onSurface
 	    	    	    font.pixelSize: 14
 	    	    	    Layout.alignment: Qt.AlignCenter
 	    	    	    // anchors.verticalCenter: parent.verticalCenter
@@ -55,7 +55,7 @@ ShellRoot {
 
 	    	        Text {
 	                    text: batteryLayout.bat.state === UPowerDeviceState.Charging ? "󰂄" : "󰁹"
-                            color: Colors.textPrimaryContainer
+                            color: Theme.onSurface
 	    	            font.pixelSize: 18
 	    	            Layout.alignment: Qt.AlignCenter
 	    	            // anchors.verticalCenter: parent.verticalCenter
