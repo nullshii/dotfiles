@@ -3,3 +3,7 @@
 [templates.quickshell]
 input_path = '~/.config/matugen/templates/quickshell.qml'
 output_path = '~/.config/quickshell/Theme.qml'
+
+[templates.alacritty]
+input_path = '~/.config/matugen/templates/alacritty.toml'
+output_path = '~/.config/alacritty/theme.toml'

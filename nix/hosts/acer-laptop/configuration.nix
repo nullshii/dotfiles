@@ -111,6 +111,7 @@
     kitty
     hyprpaper
     gitui
+    fastfetch
     matugen
   ];
 

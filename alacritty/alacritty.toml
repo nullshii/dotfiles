@@ -1,4 +1,8 @@
 [general]
+import = [
+    "~/.config/alacritty/theme.toml"
+]
+
 # Automatically reload configuration when changes are saved
 live_config_reload = true
 
