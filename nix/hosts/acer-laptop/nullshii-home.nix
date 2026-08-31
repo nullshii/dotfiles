@@ -62,6 +62,10 @@ in
       source = outOfStoreSymLink "${homeDir}/dotfiles/kitty";
       recursive = true;
     };
+    "fish" = { 
+      source = outOfStoreSymLink "${homeDir}/dotfiles/fish";
+      recursive = true;
+    };
   };
 
   home.file = {
