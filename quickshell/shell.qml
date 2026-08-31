@@ -1,69 +1,37 @@
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
-import Quickshell.Services.UPower 
+import Quickshell.Wayland
 
 ShellRoot {
-    Variants {
-        model: Quickshell.screens
+    id: root
 
-        delegate: PanelWindow {
-            id: topBar
-            
-            anchors.top: true
-            anchors.left: true
-            anchors.right: true
-            
-            margins.top: 5
-            margins.left: 5
-            margins.right: 5
+    PanelWindow {
+        id: bar
 
-            implicitHeight: 40
-            color: "transparent"
+        anchors {
+            top: true
+            left: true
+            right: true
+        }
 
-	    RowLayout {
-                anchors.fill: parent
-                anchors.leftMargin: 16
-                anchors.rightMargin: 16
-		
-		Item {
-                    Layout.fillWidth: true
-	        }
+        implicitHeight: 46
+        color: "transparent"
 
-                Rectangle {
-	    	    color: Theme.surfaceContainer
-		    border.color: Theme.outline
-		    border.width: 2
-		    radius: Math.min(width, height) * 0.42
-	    	    implicitWidth: batteryLayout.width + 20  
-	    	    implicitHeight: batteryLayout.height + 10
-	    	    
-	    	    RowLayout {
-                        id: batteryLayout
-                        spacing: 4
-	    	        anchors.centerIn : parent
+        exclusionMode: ExclusionMode.Auto
 
-                        property var bat: UPower.displayDevice
+        RowLayout {
+            anchors.fill: parent
+            anchors.leftMargin: 10
+	    anchors.rightMargin: 10
 
-                        Text {
-	                    text: Math.round(batteryLayout.bat.percentage * 100)
-                            color: Theme.onSurface
-	    	    	    font.pixelSize: 14
-	    	    	    Layout.alignment: Qt.AlignCenter
-	    	    	    // anchors.verticalCenter: parent.verticalCenter
-	                }
+	    Workspaces {}
 
-	    	        Text {
-	                    text: batteryLayout.bat.state === UPowerDeviceState.Charging ? "󰂄" : "󰁹"
-                            color: Theme.onSurface
-	    	            font.pixelSize: 18
-	    	            Layout.alignment: Qt.AlignCenter
-	    	            // anchors.verticalCenter: parent.verticalCenter
-                        }
-                    }
-                }
+            Item {
+                Layout.fillWidth: true
             }
+
+            Battery {}
         }
     }
 }
-
