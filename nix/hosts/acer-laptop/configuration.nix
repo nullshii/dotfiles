@@ -102,6 +102,7 @@
     alacritty
     kitty
     hyprpaper
+    gitui
   ];
 
   environment.sessionVariables = {
