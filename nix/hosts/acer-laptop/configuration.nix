@@ -37,6 +37,12 @@
       enable = true;
       pulse.enable = true;
     };
+    sunshine = {
+      enable = true;
+      autoStart = true;
+      capSysAdmin = true; # Required for Wayland frame capture
+      openFirewall = true; # Opens port 47989, 47990, 48010, etc.
+    };
   };
 
   users.users.nullshii = {
@@ -125,7 +131,8 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 
   system.stateVersion = "26.05";
