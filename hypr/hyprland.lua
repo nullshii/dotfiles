@@ -1,13 +1,11 @@
-------------------
----- MONITORS ----
-------------------
+local theme = require("theme")
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
     output   = "",
     mode     = "preferred",
     position = "auto",
-    scale    = "1.2",
+    scale    = "1.33",
 })
 
 
@@ -82,7 +80,7 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
+            active_border   = { colors = {theme.primary, theme.primary_container}, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
 
@@ -113,7 +111,7 @@ hl.config({
         blur = {
             enabled   = true,
             size      = 3,
-            passes    = 1,
+            passes    = 3,
             vibrancy  = 0.1696,
         },
     },
@@ -219,6 +217,7 @@ hl.config({
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
+	    scroll_factor = 0.4,
             natural_scroll = true,
         },
     },

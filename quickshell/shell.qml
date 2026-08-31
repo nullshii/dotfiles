@@ -25,13 +25,23 @@ ShellRoot {
             anchors.leftMargin: 10
 	    anchors.rightMargin: 10
 
+	    Item {
+		implicitWidth: batteryWidget.width
+	    }
+
+	    Item {
+		Layout.fillWidth: true
+	    }
+
 	    Workspaces {}
 
             Item {
                 Layout.fillWidth: true
             }
 
-            Battery {}
+	    Battery {
+		id: batteryWidget
+	    }
         }
     }
 }

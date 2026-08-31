@@ -114,6 +114,8 @@
     fastfetch
     matugen
     cmatrix
+    nautilus
+    yazi
   ];
 
   environment.sessionVariables = {
