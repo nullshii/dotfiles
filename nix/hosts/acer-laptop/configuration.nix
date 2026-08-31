@@ -53,7 +53,7 @@
       inherit inputs;
     };
     users = {
-      nullshii = import ./nullshii-home.nix;
+      nullshii = import ../../users/nullshii-home.nix;
     };
   };
 
