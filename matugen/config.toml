@@ -12,5 +12,14 @@ output_path = '~/.config/alacritty/theme.toml'
 input_path = '~/.config/matugen/templates/hyprland.lua'
 output_path = '~/.config/hypr/theme.lua'
 
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty.conf'
+output_path = '~/.config/kitty/theme.conf'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
 [config.post_reload_commands]
 hyprland = "hyprctl reload"
+# kitty = "kill -SIGUSR1 $(pgrep kitty)"

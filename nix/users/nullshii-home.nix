@@ -70,6 +70,10 @@ in
       source = outOfStoreSymLink "${homeDir}/dotfiles/matugen";
       recursive = true;
     };
+    "btop" = { 
+      source = outOfStoreSymLink "${homeDir}/dotfiles/btop";
+      recursive = true;
+    };
   };
 
   home.file = {

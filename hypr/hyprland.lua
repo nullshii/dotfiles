@@ -14,8 +14,8 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "alacritty"
-local fileManager = "dolphin"
+local terminal    = "kitty"
+local fileManager = "nautilus"
 local menu        = "hyprlauncher"
 local browser	  = "firefox"
 
@@ -217,7 +217,7 @@ hl.config({
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
-	    scroll_factor = 0.4,
+	    scroll_factor = 1.0,
             natural_scroll = true,
         },
     },
