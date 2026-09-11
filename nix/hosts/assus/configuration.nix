@@ -93,6 +93,7 @@
         user.name = "nullshii";
         init.defaultBranch = "main";
 	pull.rebase = false;
+	push.autoSetupRemote = true;
       };
     };
   };
