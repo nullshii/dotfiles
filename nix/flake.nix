@@ -40,6 +40,16 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+
+      assus = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./hosts/assus/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
   };
 }
