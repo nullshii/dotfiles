@@ -15,7 +15,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking = {
-    hostName = "nixos-acer-laptop";
+    hostName = "assus";
     networkmanager.enable = true;
     firewall.enable = false;
   };
@@ -30,6 +30,11 @@
     displayManager.ly.enable = true;
     upower.enable = true;
     openssh.enable = true;
+    supergfxd.enable = true;
+    asusd = {
+      enable = true;
+      # enableUserService = true;
+    };
     xserver = {
       # videoDrivers = [ "nvidia" ];
     };
