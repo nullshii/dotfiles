@@ -122,6 +122,8 @@
     cmatrix
     nautilus
     yazi
+    claude-code
+    zed-editor
   ];
 
   environment.sessionVariables = {
